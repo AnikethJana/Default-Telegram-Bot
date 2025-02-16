@@ -26,11 +26,12 @@ A simple and efficient Telegram bot that notifies users when it is offline. The 
    ```sh
    pip install python-telegram-bot python-dotenv
    ```
-3. **Create a `.env` file and add the following:**
+3. **Add the following to  `.env`**
    ```sh
-   BOT_TOKEN=your-bot-token-here
-   UPDATE_CHANNEL=@your-update-channel
-   OFFLINE_MESSAGE="⚠️ The bot is currently offline. Please check {UPDATE_CHANNEL} for updates."
+   BOT_TOKEN=your_telegram_bot_token
+   WEBHOOK_URL=your_application_url
+   UPDATE_CHANNEL=@your_channel_name
+   OFFLINE_MESSAGE=your_custom_message
    ```
 4. **Replace** `your-bot-token-here` and `@your-update-channel` with actual values.
 
