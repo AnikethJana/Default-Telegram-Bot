@@ -46,7 +46,7 @@ docker-compose up --build -d
 ## ▶️ Usage
 Run the bot with:
 ```sh
-python3 bot.py
+docker-compose up -d
 ```
 The bot will now automatically respond to all messages with the custom offline message you set in environment variables. The bot also includes a simple Flask web UI that displays a dark-themed invite page to your Telegram channel.
 
