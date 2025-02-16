@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  telegram-bot:
+    build: .
+    container_name: telegram-offline-bot
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - WEBHOOK_URL=${WEBHOOK_URL}
+      - UPDATE_CHANNEL=${UPDATE_CHANNEL}
+      - OFFLINE_MESSAGE=${OFFLINE_MESSAGE}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+        reservations:
+          memory: 128M
