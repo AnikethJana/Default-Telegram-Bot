@@ -24,7 +24,7 @@ A simple and efficient Telegram bot that notifies users when it is offline. The 
    ```
 2. **Install dependencies:**
    ```sh
-   pip install python-telegram-bot python-dotenv
+   pip install -r requirements.txt
    ```
 3. **Add the following to  `.env`**
    ```sh
